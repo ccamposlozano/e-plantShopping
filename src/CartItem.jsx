@@ -50,10 +50,8 @@ const CartItem = ({ onContinueShopping }) => {
     const calculateTotalCost = (item) => {
         const cost = parseFloat(item.cost.substring(1)); // e.g. "$3.00" → 3.00
         return (cost * item.quantity).toFixed(2); // Subtotal formatted to 2 decimal places
-    };
-Ï    
+    };    
 
-    
 
     return (
         <div className="cart-container">
@@ -80,7 +78,7 @@ const CartItem = ({ onContinueShopping }) => {
             <div className="continue_shopping_btn">
                 <button className="get-started-button" onClick={(e) => handleContinueShopping(e)}>Continue Shopping</button>
                 <br />
-                <button className="get-started-button1">Checkout</button>
+                <button className="get-started-button1" onClick = {(e) => handleCheckoutShopping(e)}>Checkout</button>
             </div>
         </div>
     );
